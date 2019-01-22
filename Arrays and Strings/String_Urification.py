@@ -7,6 +7,7 @@ Max = 1000
 
 
 def string_urify(str, str_len):
+
     # using for loop
     str_r = str.rstrip(' ')
     for i in range(len(str_r)):
