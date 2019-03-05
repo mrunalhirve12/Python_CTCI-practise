@@ -25,12 +25,15 @@ def isEditDistanceOne(s1, s2):
         counter += 1
     return counter == 1
 
-s1 = "gfge"
-s2 = "gf"
+s1 = "pale"
+s2 = "alee"
 if isEditDistanceOne(s1, s2):
     print("Yes")
 else:
     print("No")
+
+
+
 
 
 

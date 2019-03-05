@@ -51,7 +51,7 @@ Constructed balanced BST is
 1 3 5 7 
 """
 
-arr = [1, 2, 3, 4, 5, 6, 7]
+arr = [1, 2, 3, 4, 5, 6, 7, 8]
 root = sortedArrayToBST(arr)
 print("PreOrder Traversal of constructed BST")
 preOrder(root)

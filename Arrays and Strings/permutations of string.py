@@ -75,3 +75,8 @@ if are_permutations('abc', 'dca'):
     print("yes")
 else:
     print("no")
+
+
+l = "   mru    "
+m= l.lstrip().rstrip()
+print(l)

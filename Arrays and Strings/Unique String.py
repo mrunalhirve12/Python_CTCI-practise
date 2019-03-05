@@ -48,3 +48,18 @@ def uniques(s):
             return False
         uchar.add(s)
     return True
+
+#--------------------------------------------------------------------------------------------------
+def uni(s):
+    checker = 0
+    for i in range (len(s)):
+        bitindex = ord(s[i]) - ord('a')
+        k = (1 << bitindex)
+        m = checker and (1 << bitindex)
+        if checker and (1 << bitindex) > 0 :
+            return False
+        checker = checker or (1 << bitindex)
+    return True
+
+
+uni("misss")
