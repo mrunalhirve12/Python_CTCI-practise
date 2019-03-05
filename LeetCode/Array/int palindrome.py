@@ -39,6 +39,9 @@ class Solution:
         #returns the number
         return res
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 s= Solution
 s.isPalindrome(s,121)
