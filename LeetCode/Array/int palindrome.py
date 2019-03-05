@@ -38,6 +38,14 @@ class Solution:
             x = int(x /10)
         #returns the number
         return res
-
+"""
 s= Solution
+#Test Case 1
 s.isPalindrome(s,121)
+
+#Test Case 2
+s.isPalindrome(s,-121)
+
+#Test Case 2
+s.isPalindrome(s,134)
+"""
