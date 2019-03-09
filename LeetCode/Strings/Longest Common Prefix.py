@@ -58,4 +58,8 @@ s.longestCommonPrefix(s,[])
 Test Case #4
 s = Solution
 s.longestCommonPrefix(s,["a"])
+
+Test Case #4
+s = Solution
+s.longestCommonPrefix(s,["flow","flow","flow"])
 """
