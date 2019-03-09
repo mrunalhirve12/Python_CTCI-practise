@@ -18,13 +18,23 @@ class Solution:
             return 0
         elif flag == True:
             res = -1 * res
-            print(res)
+            return res
         else:
-            print(res)
+            return res
 
+"""
 s= Solution
 #Test Case 1
+s.reverse(s,121)
+
+#Test Case 2
+s.reverse(s,-121)
+
+#Test Case 3
 s.reverse(s,120)
 
+#Test Case 4
+s.reverse(s,15678934509)
+"""
 
 
