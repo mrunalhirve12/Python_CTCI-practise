@@ -46,11 +46,6 @@ class Solution(object):
         #returns list of results
         return list(result)
 
-
-
-
-
-
 s = Solution()
 s.threeSum([-1, 0, 1, 2, -1, -4])
 
