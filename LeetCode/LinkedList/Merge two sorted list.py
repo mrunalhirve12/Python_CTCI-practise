@@ -26,7 +26,10 @@ class Solution(object):
         if not l2:
             return l1
 
+        #initialize a resultype node
         rtype = dummyHead = ListNode(0)
+
+        #compare both lists if element present
         while l1 and l2:
             if l1.val < l2.val:
                 rtype.next = ListNode(l1.val)
@@ -35,9 +38,12 @@ class Solution(object):
                 rtype.next = ListNode(l2.val)
                 l2 = l2.next
             rtype = rtype.next
+
+        #if l1 list still present
         if l1:
             rtype.next = l1
 
+        # if l2 list still present
         if l2:
             rtype.next = l2
 
