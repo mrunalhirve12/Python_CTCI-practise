@@ -21,23 +21,27 @@ class Solution(object):
         :type str: str
         :rtype: int
         """
+        #remove all spaces
         str = str.strip()
+        #check for base cases
         if not str or len(str) < 1:
             return 0
         j = 0
+        #chk for sign
         sign = '+'
         if str[j] == '-':
             sign = '-'
             j += 1
         elif str[j] == '+':
             j += 1
-
+        #calculate int and store in res
         result = 0
         while len(str) > j and str[j] >= '0' and str[j] <= '9':
             result = result * 10 + (ord(str[j]) - ord('0'))
             j += 1
         if sign == '-':
             result = -result
+        # check max and min int
         if result > 2147483647:
             return 2147483647
         elif result < -2147483648:
@@ -47,6 +51,7 @@ class Solution(object):
 
 
 s = Solution()
+s.myAtoi("42")
 """
 Test Case #1
 s.myAtoi("42")
@@ -70,4 +75,3 @@ Test Case #7
 s.myAtoi(" ")
 """
 
-s.myAtoi("42")
