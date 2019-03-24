@@ -15,8 +15,9 @@ class Solution(object):
         k = 0
         #create a final data structure
         currRow = []
+        res = []
         #iterate through the Rows you want
-        while k < numRows + 1:
+        while k < numRows :
             #create a new data structure
             nextRow = []
             #iterate through index on each row
@@ -30,8 +31,8 @@ class Solution(object):
             #when row is completed add to curr row
             currRow = nextRow
             k += 1
-
-        return currRow
+            res.append(currRow)
+        return res
 
 s = Solution()
 s.generate(4)
