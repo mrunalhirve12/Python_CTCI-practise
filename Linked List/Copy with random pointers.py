@@ -15,6 +15,26 @@ Note:
 
 You must return the copy of the given head as a reference to the cloned list.
 """
+"""
+Method 1 (Uses O(n) extra space)
+This method stores the next and arbitrary mappings (of original list) in an array first, then modifies the original Linked List (to create copy), creates a copy. And finally restores the original list.
+
+1) Create all nodes in copy linked list using next pointers.
+2) Store the node and its next pointer mappings of original linked list.
+3) Change next pointer of all nodes in original linked list to point to the corresponding node in copy linked list.
+Following diagram shows status of both Linked Lists after above 3 steps. The red arrow shows arbit pointers and black arrow shows next pointers.
+"""
+
+"""
+Method 2 (Uses Constant Extra Space)
+Thanks to Saravanan Mani for providing this solution. This solution works using constant space.
+1) Create the copy of node 1 and insert it between node 1 & node 2 in original Linked List, create the copy of 2 and insert it between 2 & 3.. Continue in this fashion, add the copy of N afte the Nth node
+2) Now copy the arbitrary link in this fashion
+
+CODE uses O(1) extra space
+"""
+
+
 # Definition for a Node.
 class Node(object):
     def __init__(self, val, next, random):
@@ -72,3 +92,5 @@ l2.random = l2
 
 s = Solution()
 s.copyRandomList(l1)
+
+
