@@ -26,7 +26,6 @@ class Solution(object):
         if not nums or not k:
             return None
         """
-        #MAX HEAP: Time complexity: O(n + k log n). Space complexity: O(n).
         heap = [-n for n in nums]
         heapq.heapify(heap)
         for i in range(k):
