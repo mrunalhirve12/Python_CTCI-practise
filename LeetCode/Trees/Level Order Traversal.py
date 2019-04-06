@@ -23,7 +23,7 @@ class Solution(object):
         queue = []
         # append root in queue
         queue.append(root)
-        # while queuenot empty
+        # while queue not empty
         while queue:
             # take values from queue of each level as list
             res.append([c.val for c in queue])
