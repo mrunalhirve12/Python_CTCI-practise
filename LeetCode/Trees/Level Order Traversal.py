@@ -15,27 +15,27 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[List[int]]
         """
-        #if root is None
+        # if root is None
         if root is None:
             return []
-        #initialize final result list res, queue.
+        # initialize final result list res, queue.
         res = []
         queue = []
-        #append root in queue
+        # append root in queue
         queue.append(root)
-        #while queuenot empty
+        # while queuenot empty
         while queue:
-            #take values from queue of each level as list
+            # take values from queue of each level as list
             res.append([c.val for c in queue])
-            #initialize new list
+            # initialize new list
             qq = []
-            #for nodes in queue each level, get it left and right child
+            # for nodes in queue each level, get it left and right child
             for node in queue:
                 if node.left is not None:
                     qq.append(node.left)
                 if node.right is not None:
                     qq.append(node.right)
-            #append new list in queue
+            # append new list in queue
             queue = qq
         return res
 
