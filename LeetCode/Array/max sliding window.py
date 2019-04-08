@@ -57,7 +57,22 @@ class Solution(object):
         return final
         """
 
-       
+        ans = []
+        queue = collections.deque()
+
+        for i, x in enumerate(nums):
+            while queue and queue[0] < i - k + 1:
+                queue.popleft()
+
+            while queue and nums[queue[-1]] < x:
+                queue.pop()
+
+            queue.append(i)
+
+            if i + 1 >= k:
+                ans.append(nums[queue[0]])
+
+        return ans
 
 
 s = Solution()
