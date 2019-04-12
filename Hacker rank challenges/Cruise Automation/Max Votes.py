@@ -26,7 +26,7 @@ A simple solution is to run two loops and count occurrences of every word. Time 
 EFFICIENT APPROACH: O(N) SPACE COMPLEXITY: O(N)
 An efficient solution is to use Hashing. We insert all votes in a hash map and keep track of counts of different names. 
 print the person with maximum votes while traversing
-"""
+
 
 def max_vote(arr):
     dict = {}
@@ -47,3 +47,27 @@ def max_vote(arr):
 
 
 print(max_vote(["john","johnny","jackie","johnny","john","jackie","jamie","jamie","john","johnny","jamie","johnny","john"]))
+
+"""
+
+"""
+Display list of people along with votes they received in alphabetical order 
+"""
+def max_vote(arr):
+    dict = {}
+    winner = ""
+    max_vote = - sys.maxsize -1
+    dictlist = []
+    for i in range(len(arr)):
+        if arr[i] not in dict:
+            dict[arr[i]] = 1
+        else:
+            dict[arr[i]] += 1
+    # sorting by value and if i have a equality by value - it must be sorting lexicographically.
+    for key, value in sorted(dict.items(),key=lambda x:(-x[1],x[0])):
+    #for key, value in dict.items():
+        temp = [key, value]
+        dictlist.append(temp)
+    print(dictlist)
+
+max_vote(["john","johnny","jackie","johnny","john","jackie","jamie","jamie","john","johnny","jamie","johnny","john"])
