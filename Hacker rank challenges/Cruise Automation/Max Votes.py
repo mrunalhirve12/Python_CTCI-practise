@@ -63,11 +63,23 @@ def max_vote(arr):
             dict[arr[i]] = 1
         else:
             dict[arr[i]] += 1
-    # sorting by value and if i have a equality by value - it must be sorting lexicographically.
+
+    for entry in dict:
+        if dict[entry] > max_vote:
+            max_vote = dict[entry]
+            winner = entry
+        elif dict[entry] == max_vote:
+            if entry > winner:
+                winner = entry
+            else:
+                winner = winner
+    print(winner)
+    """"# sorting by value and if i have a equality by value - it must be sorting lexicographically.
     for key, value in sorted(dict.items(),key=lambda x:(-x[1],x[0])):
     #for key, value in dict.items():
         temp = [key, value]
         dictlist.append(temp)
     print(dictlist)
+    """
 
 max_vote(["john","johnny","jackie","johnny","john","jackie","jamie","jamie","john","johnny","jamie","johnny","john"])

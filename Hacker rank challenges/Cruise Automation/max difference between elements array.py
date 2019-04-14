@@ -50,9 +50,9 @@ print(maxdiff([2, 3, 10, 6, 4, 8, 1]))
 
 #==========================================================================================================
 
-"""
-OPTIMIZED APPROACH 2: TIME COMPLEXITY :O(n) & SPACE COMPLEXITY: O(1)
-We can also keep track of max element from right side
+
+#OPTIMIZED APPROACH 2: TIME COMPLEXITY :O(n) & SPACE COMPLEXITY: O(1)
+#We can also keep track of max element from right side
 
 
 def maxdiff(arr):
@@ -68,7 +68,7 @@ def maxdiff(arr):
     return max_diff
 
 print(maxdiff([2, 3, 10, 6, 4, 8, 1]))
-"""
+
 
 #=======================================================================================================
 
