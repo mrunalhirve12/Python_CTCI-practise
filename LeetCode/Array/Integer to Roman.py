@@ -61,10 +61,9 @@ class Solution(object):
                 break
             # get quotient as count (no of times)
             count = int(num / dic[symbol])
-            # checking till count gets 0
+            # get remaining no through mod
+            num = int(num % dic[symbol])  # checking till count gets 0
             while count > 0:
-                # get remaining no through mod
-                num = int(num % dic[symbol])
                 # append res & dec count
                 result += symbol
                 count -= 1

@@ -13,21 +13,21 @@ class Solution(object):
         :rtype: List[List[int]]
         """
         k = 0
-        #create a final data structure
+        # create a final data structure
         currRow = []
-        #iterate through the Rows you want
+        # iterate through the Rows you want
         while k < numRows + 1:
-            #create a new data structure
+            # create a new data structure
             nextRow = []
-            #iterate through index on each row
+            # iterate through index on each row
             for pos in xrange(k + 1):
-                #as last elements are always 1
+                # as last elements are always 1
                 if pos == 0 or pos == k:
                     nextRow.append(1)
-                #middle elements are addition of prev element rows
+                # middle elements are addition of prev element rows
                 else:
                     nextRow.append(currRow[pos - 1] + currRow[pos])
-            #when row is completed add to curr row
+            # when row is completed add to curr row
             currRow = nextRow
             k += 1
 
