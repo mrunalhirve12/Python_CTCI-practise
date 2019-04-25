@@ -71,6 +71,6 @@ if __name__ == '__main__':
     mainTree.left = someSubTrees["left"]
     mainTree.right = someSubTrees["right"]
     ttll = tree_to_linked_lists(mainTree)
-    for depthLevel, linkedList in ttll.iteritems():
+    for depthLevel, linkedList in ttll.items():
         print("{0} {1}".format(depthLevel, linkedList))
 
