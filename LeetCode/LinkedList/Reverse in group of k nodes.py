@@ -54,6 +54,9 @@ class Solution(object):
             curr = next
         return dummy.next
         """
+
+        """
+        # Iterative : too complex to understand
         while not head or not head.next:
             return head
         if k == 1:
@@ -93,6 +96,21 @@ class Solution(object):
                             left = prev
                             prev = tmp
                 return record.next
+        """
+        dummy = ListNode(-1)
+        dummy.next, tail = head, dummy
+        p = q = head
+        i = 0
+        while p:
+            p = p.next
+            i += 1
+            if i == k:
+                prev = p
+                while q.next != p:
+                    q.next, q, prev = prev, q.next, q
+                tail.next, tail, q.next, q, i = q, tail.next, prev, p, 0
+        return dummy.next
+
 
 l1 = ListNode(1)
 l1.next = ListNode(2)
