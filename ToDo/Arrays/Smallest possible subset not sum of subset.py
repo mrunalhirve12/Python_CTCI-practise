@@ -28,3 +28,7 @@ print(findSmallest(arr3, n3))
 arr4 = [1, 1, 3, 4]
 n4 = len(arr4)
 print(findSmallest(arr4, n4))
+
+arr5 = [1, 3, 6, 4, 1, 2]
+n5 = len(arr5)
+print(findSmallest(arr5, n5))
