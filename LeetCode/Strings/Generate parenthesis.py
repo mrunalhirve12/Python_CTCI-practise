@@ -19,7 +19,8 @@ class Solution(object):
         :type n: int
         :rtype: List[str]
         """
-        # idea is to
+        # idea is to take a pair of parenthesis
+        # generate parenthesis and append to the new list
         pairs = ["()"]
         i = 1
         while i < n:
