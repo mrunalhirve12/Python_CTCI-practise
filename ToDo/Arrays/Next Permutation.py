@@ -1,1 +1,0 @@
-#https://leetcode.com/problems/next-permutation/discuss/241684/concise-python-solution-beat-99
