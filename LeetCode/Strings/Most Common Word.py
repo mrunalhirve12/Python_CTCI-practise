@@ -29,6 +29,7 @@ paragraph only consists of letters, spaces, or the punctuation symbols !?',;.
 There are no hyphens or hyphenated words.
 Words only consist of letters, never apostrophes or other punctuation symbols.
 """
+import re
 
 
 class Solution(object):
@@ -38,7 +39,9 @@ class Solution(object):
         :type banned: List[str]
         :rtype: str
         """
-        # simple solution
+
+        """"
+        # Fails for case #2
         paragraph = paragraph.lower()
         banned = set(banned)
 
@@ -59,5 +62,35 @@ class Solution(object):
                 maximum = val
                 char = key
         return char
+    """
+        paragraph = paragraph.lower()
+        banned = set(banned)
+        paragraph = re.sub(r'[!"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~]', ' ', paragraph)
+        lis = paragraph.split()
+        dic = {}
+        for word in lis:
+            #word = word.strip("?!',;.")
+            if word not in banned:
+                if word not in dic:
+                    dic[word] = 1
+                else:
+                    dic[word] += 1
+
+        maximum = 0
+        char = ""
+        for key, val in dic.items():
+            if val > maximum:
+                maximum = val
+                char = key
+        return char
+
 s = Solution()
+print(s.mostCommonWord("a, a, a, a, b,b,b,c, c", ["a"]))
+
+"""
+TESTCASE #1
 print(s.mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit.", ["hit"]))
+
+TESTCASE #2
+print(s.mostCommonWord("Bob hit a ball, the hit BALL flew far after it was hit.", ["hit"]))
+"""
