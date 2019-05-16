@@ -21,6 +21,7 @@ class Solution(object):
         """
         # TIME  AND SPACE COMPLEXITY O(N)
         # update the last index value in dict
+        """
         dic = {}
         for i, char in enumerate(S):
             dic[char] = i
@@ -44,9 +45,27 @@ class Solution(object):
             elif dic[char] > hi:
                 hi = dic[char]
         return res
+        """
+        dict = {}
+        for i, ch in enumerate(S):
+            dict[ch] = i
+        hi = 0
+        count = 1
+        res = []
+        for i in range(len(S) - 1):
+            if hi < dict[S[i]]:
+                hi = dict[S[i]]
+            if hi == i:
+                l = count
+                res.append(l)
+                count = 0
+            count += 1
+        res.append(count)
+        return res
+
 
 s = Solution()
-print(s.partitionLabels("eaaaabaaec"))
+print(s.partitionLabels("ababcbacadefegdehijhklij"))
 
 """
 Test Case #1
