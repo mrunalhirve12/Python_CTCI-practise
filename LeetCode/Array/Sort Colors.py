@@ -52,7 +52,7 @@ class Solution(object):
         return nums
 
 s = Solution()
-print(s.sortColors([0,1,0]))
+print(s.sortColors([0,1,2,0,1,2]))
 
 """
 TESTCASE #1
