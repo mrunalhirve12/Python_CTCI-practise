@@ -29,12 +29,27 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 """
 import sys
 
+from pip._vendor.msgpack.fallback import xrange
+
+
 class Solution(object):
     def maxProfit(self, prices):
-        """
-        :type prices: List[int]
-        :rtype: int
-        """
+        if not prices or len(prices) == 1:
+            return 0
+        dp = [0] * len(prices)
+        for i in xrange(1, len(prices)):
+            dp[i] = prices[i] - prices[i - 1]
+        glo = loc = dp[0]
+        for i in xrange(1, len(dp)):
+            loc = max(loc + dp[i], dp[i])
+            glo = max(glo, loc)
+        return glo
+
+    """
+    def maxProfit(self, prices):
+
+        #:type prices: List[int]
+        #:rtype: int
         if not prices:
             return 0
         min = sys.maxsize
@@ -46,10 +61,11 @@ class Solution(object):
                 maxprofit = prices[i] - min
         print(maxprofit)
         return maxprofit
+    """
 
 
 s = Solution()
-s.maxProfit([])
+s.maxProfit([7,1,5,3,6,4])
 
 """
 Test Case #1
