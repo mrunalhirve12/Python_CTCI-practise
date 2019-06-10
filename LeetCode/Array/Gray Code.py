@@ -48,4 +48,4 @@ class Solution(object):
         return res
 
 s = Solution()
-s.grayCode(2)
+print(s.grayCode(2))

@@ -65,7 +65,7 @@ class Solution(object):
 
 
 s = Solution()
-print(s.partitionLabels("ababcbacadefegdehijhklij"))
+print(s.partitionLabels("eaaaabaaec"))
 
 """
 Test Case #1

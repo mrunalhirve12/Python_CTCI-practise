@@ -55,7 +55,7 @@ class Solution(object):
         return dummy.next
         """
 
-        """
+
         # Iterative : too complex to understand
         while not head or not head.next:
             return head
@@ -110,7 +110,7 @@ class Solution(object):
                     q.next, q, prev = prev, q.next, q
                 tail.next, tail, q.next, q, i = q, tail.next, prev, p, 0
         return dummy.next
-
+"""
 
 l1 = ListNode(1)
 l1.next = ListNode(2)

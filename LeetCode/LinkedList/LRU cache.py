@@ -23,9 +23,9 @@ cache.get(4);       // returns 4
 """
 import collections
 
-"""
-Doubly linked lists to store the (key, val) pair, and dictionary mapping key to the corresponding node. 
-Time complexity for both get and put : O(1). Space complexity: O(capacity)
+
+#Doubly linked lists to store the (key, val) pair, and dictionary mapping key to the corresponding node.
+#Time complexity for both get and put : O(1). Space complexity: O(capacity)
 
 # CREATING LISTNODE
 class ListNode(object):
@@ -117,9 +117,9 @@ class LRUCache(object):
                 # delete node & decrease length
                 del self.key2node[remove.key]
                 self.length -= 1
-"""
 
 
+#=======================================================================================================================
 class LRUCache:
 
     def __init__(self, capacity):

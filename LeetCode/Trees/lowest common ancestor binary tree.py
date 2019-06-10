@@ -22,6 +22,8 @@ Note:
 All of the nodes' values will be unique.
 p and q are different and both values will exist in the binary tree.
 """
+
+#GEEKS better
 # Definition for a binary tree node.
 class TreeNode(object):
      def __init__(self, x):

@@ -20,4 +20,5 @@ def noShiftsC(list):
     return min_index
 
 
+
 print(noShiftsC([7, 9, 11, 12, 5]))

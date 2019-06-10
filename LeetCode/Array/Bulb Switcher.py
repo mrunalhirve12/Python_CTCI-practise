@@ -38,4 +38,4 @@ class Solution(object):
 
 
 s = Solution()
-print(s.bulbSwitch(2))
+print(s.bulbSwitch(5))

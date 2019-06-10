@@ -40,6 +40,7 @@ class Solution(object):
         for i in xrange(1, len(s) + 1):
             #look for all slices of string if present in dict and mark True
             for j in xrange(i):
+                bh = s[j:i]
                 if dp[j] and s[j:i] in wordDict:
                     dp[i] = True
                     break
@@ -47,7 +48,7 @@ class Solution(object):
         return dp[-1]
 
 s = Solution()
-s.wordBreak("applepenapple", ["apple", "pen"])
+s.wordBreak("catsandog", ["cats", "dog", "sand", "and", "cat"])
 
 """
 TESTCASE #1

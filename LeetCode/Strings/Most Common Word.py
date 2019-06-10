@@ -29,6 +29,7 @@ paragraph only consists of letters, spaces, or the punctuation symbols !?',;.
 There are no hyphens or hyphenated words.
 Words only consist of letters, never apostrophes or other punctuation symbols.
 """
+import operator
 import re
 
 
@@ -77,11 +78,14 @@ class Solution(object):
                     dic[word] += 1
 
         maximum = 0
+        """
         char = ""
         for key, val in dic.items():
             if val > maximum:
                 maximum = val
                 char = key
+        """
+        char = max(dic.items(),  key = lambda x: x[1])[0]
         return char
 
 s = Solution()
