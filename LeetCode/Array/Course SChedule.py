@@ -59,4 +59,4 @@ class Solution(object):
 
 
 s = Solution()
-s.canFinish(3, [[1,0],[2,1]])
+s.canFinish(2, [[1,0]])

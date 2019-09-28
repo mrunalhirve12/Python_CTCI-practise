@@ -34,4 +34,4 @@ class Solution:
         return ans
 
 s = Solution()
-s.lengthOfLongestSubstring("pwwkew")
+s.lengthOfLongestSubstring("abcabc")

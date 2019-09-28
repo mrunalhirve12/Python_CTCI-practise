@@ -22,16 +22,19 @@ class Solution:
         """
         if not intervals:
             return 0
-        intervals = sorted(intervals, key = lambda x: x.start)
+        intervals = sorted(intervals, key = lambda x: x[0])
         heap = []
         heapq.heapify(heap)
         res = 1
         for interval in intervals:
             if not heap:
-                heapq.heappush(heap, interval.end)
+                heapq.heappush(heap, interval[1])
             else:
-                if heap[0] <= interval.start:
+                if heap[0] <= interval[0]:
                     heapq.heappop(heap)
-                heapq.heappush(heap, interval.end)
+                heapq.heappush(heap, interval[1])
             res = max(res, len(heap))
         return res
+
+s = Solution()
+s.minMeetingRooms([[0, 30],[5, 10],[15, 20]])

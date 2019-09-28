@@ -19,7 +19,7 @@ class Solution(object):
         """
         :type matrix: List[List[str]]
         :rtype: int
-        """
+
         if not matrix:
             return 0
         m = len(matrix)
@@ -38,8 +38,19 @@ class Solution(object):
                 if table[i][j] > maximum:
                     maximum = table[i][j]
         return maximum * maximum
+        """
+        m = len(matrix)
+        n = len(matrix[0]) if m else 0
+        maxn = 0
+        f = [[0] * (n) for _ in range(m)]
+        for i in range(m):
+            for j in range(n):
+                if matrix[i][j] == 1:
+                    f[i][j] = 1 + min(f[i - 1][j], f[i][j - 1], f[i - 1][j - 1])
+                    maxn = max(maxn, f[i][j])
+        return maxn ** 2
 
 
 mat = [[1, 0, 1, 0, 0], [1, 0, 1, 1, 1], [1, 1, 1, 1, 1], [1, 0, 0, 1, 0]]
 s = Solution()
-s.maximalSquare(mat)
+print(s.maximalSquare(mat))

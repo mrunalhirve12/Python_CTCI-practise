@@ -42,4 +42,4 @@ class Solution(object):
 
 
 s = Solution()
-print(s.calculate("(5+2)*2"))
+print(s.calculate("(5.0+2.0)*2.12"))

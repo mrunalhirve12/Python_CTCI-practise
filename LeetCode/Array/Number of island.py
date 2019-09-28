@@ -60,7 +60,7 @@ class Solution(object):
         height = len(grid)
         width = len(grid[0])
         for i in range(height):
-            for j in range(width):
+            for j in range(width):b
                 if grid[i][j] == 1 and (i,j) not in visit:
                     dfs(grid, (i,j))
                     count += 1

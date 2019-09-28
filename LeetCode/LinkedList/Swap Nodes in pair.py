@@ -46,6 +46,23 @@ class Solution(object):
             nxt = curr.next
         return rec
 
+        """
+        dummy = ListNode(-1)
+        dummy.next = head
+        current = dummy
+        
+        while current.next != None and current.next.next != None:
+            first = current.next
+            second = current.next.next
+            
+            current.next = second
+            first.next = second.next
+            second.next = first
+      
+            current = current.next.next
+        return dummy.next
+        """
+
 
 l1 = ListNode(1)
 l1.next = ListNode(2)

@@ -1,7 +1,7 @@
 #https://codereview.stackexchange.com/questions/43344/retrieve-min-from-stack-in-o1
 class SmartStack:
     def __init__(self):
-        self.stack= []
+        self.stack = []
         self.min = []
 
     def stack_push(self, x):

@@ -53,7 +53,7 @@ class Solution(object):
             #prev.next = next
             curr = next
         return dummy.next
-        """
+
 
 
         # Iterative : too complex to understand
@@ -96,7 +96,7 @@ class Solution(object):
                             left = prev
                             prev = tmp
                 return record.next
-        """
+"""
         dummy = ListNode(-1)
         dummy.next, tail = head, dummy
         p = q = head
@@ -110,7 +110,7 @@ class Solution(object):
                     q.next, q, prev = prev, q.next, q
                 tail.next, tail, q.next, q, i = q, tail.next, prev, p, 0
         return dummy.next
-"""
+
 
 l1 = ListNode(1)
 l1.next = ListNode(2)
@@ -119,4 +119,4 @@ l1.next.next.next = ListNode(4)
 l1.next.next.next.next = ListNode(5)
 
 s = Solution()
-s.reverseKGroup(l1, 2)
+s.reverseKGroup(l1, 3)

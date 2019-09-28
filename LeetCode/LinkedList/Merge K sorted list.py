@@ -32,7 +32,7 @@ class Solution(object):
         """
         """
         ??????? Not clear
-        """
+        
         ans = []
         heap = []
         for i in xrange(len(lists)):
@@ -57,7 +57,7 @@ class Solution(object):
             if node.next:
                 heapq.heappush(heap,(node.next.val,node.next))
         return dummy.next
-        """
+
 
         """
         If linked list given
